@@ -1,6 +1,7 @@
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     justify-self: center;
+    /* outline: solid red 1px; */
 }
 
 li {
@@ -8,11 +9,20 @@ li {
     flex: none;
     font-weight: 500;
     list-style: none;
+}
+a {
     margin-left: 50px;
     margin-right: 50px;
+    border-radius: 10px;
+    background-color: blanchedalmond;
+    padding: 10px;
+    text-decoration: none;
 }
-
 ul {
     display: flex;
     justify-content: center;
+}
+
+header :not(:last-child){
+    border-right: 2px solid grey;
 }
