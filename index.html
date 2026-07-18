@@ -3,12 +3,30 @@
     <head>
         <meta charset="UTF-8" />
         <title>My Website</title>
+            <style>
+            .page-loader {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: #f4f7fb;
+                z-index: 9999;
+                transition: opacity 0.5s ease, visibility 0.5s ease;
+            }
+            #loaderHidden {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+            }
+        </style>
     </head>
-    <body>
+    <body id = "main">
+        <div class="page-loader"></div>
         <header id="navigation">
             <nav>
                 <ul>
-                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/index.html" style="color: red">Home</a></li>
                     <li><a href="/src/aboutMe.html">About Me</a></li>
                     <li><a href="/src/myInterests.html">My Interests</a></li>
                     <li><a href="/src/contactMe.html">Contact Me</a></li>
