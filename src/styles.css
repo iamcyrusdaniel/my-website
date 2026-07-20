@@ -1,6 +1,8 @@
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     user-select: none;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -76,7 +78,7 @@ a {
 }
 ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 20px;
     background-color: #d7e6fa;
     align-items: center;
@@ -88,6 +90,7 @@ body.dark ul {
 
 body.dark ul a {
     color: #88CC66;
+    white-space: nowrap;
 }
 
 body.dark ul #current {
@@ -138,27 +141,72 @@ body.dark ul img {
 }
 
 .hidden {
-    visibility: none;
+    display: none;
+}
+
+.backgroundGlow {
+    z-index: -1;
+}
+
+.growingBox {
+    position: fixed;
+    opacity: 0.8;
+    filter: blur(150px);
+}
+
+#extras {
+    position: fixed;
+    pointer-events: none;
 }
 
 #extras #box1{
+    height: 800px;
+    width: 800px;
+    top: 5%;
+    left: 5%;
+    background-color: #4dc7ff;
     transition: scale 0.8s ease-in-out;
 }
 
 #extras #box2{
+    height: 700px;
+    width: 1200px;
+    top: 50%;
+    right: -2%;
+    background-color: #4ce027;
     transition: scale 1s ease-in-out;
 }
 
 #extras #box3{
+    height: 700px;
+    width: 700px;
+    bottom: 30%;
+    left: 60%;
+    background-color: #ff2525;
     transition: scale 0.6s ease-in-out;
 }
 
 @keyframes firstBox {
-
+    from {
+        scale: 1;
+    }
+    to {
+        scale: 1.5;
+    }
 }
 @keyframes secondBox {
-
+    from {
+        scale: 1;
+    }
+    to {
+        scale: 2;
+    }
 }
 @keyframes thirdBox {
-
+    from {
+        scale: 1;
+    }
+    to {
+        scale: 0.7;
+    }
 }

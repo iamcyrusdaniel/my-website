@@ -13,11 +13,18 @@ const randomMessages = [
 let randomInt = Math.floor(Math.random() * randomMessages.length);
 document.addEventListener("DOMContentLoaded", () => {
     let nightButton = document.getElementById("nightButton");
+    let extrasButton = document.getElementById("extrasButton");
     nightButton.addEventListener("click", () => {darkModeEnable()});    
     document.querySelector(".page-loader").id = "loaderHidden";
     if (localStorage.getItem("theme") === "dark") {
         document.body.classList.add("dark");
         document.getElementById("nightButtonImage").src = "https://www.svgrepo.com/show/432507/light-mode.svg";
+    }
+    if(extrasButton){
+        extrasButton.addEventListener("click", () => {
+            extrasButton.remove();
+            document.getElementById("extras").classList.remove("hidden");
+        })
     }
 })
 while(randomInt == lastIndex){ // checks if it's the same message last time the page was loaded
@@ -50,7 +57,7 @@ const createParticle = function(x, y){
     const velocityY = Math.sin(angle) * speed;
     let opacity = 1;
     let scale = 1;
-    const updateMovement = function(speed, angle){
+    const updateMovement = function(){
         x += velocityX;
         y += velocityY;
 
