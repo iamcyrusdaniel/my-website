@@ -10,7 +10,7 @@
                 left: 0;
                 width: 100vw;
                 height: 100vh;
-                background: #f4f7fb;
+                background: #001432;
                 z-index: 9999;
                 transition: opacity 0.5s ease, visibility 0.5s ease;
             }
@@ -22,17 +22,18 @@
         </style>
     </head>
     <body>
+        <h1 id="hello">hello</h1>
         <div class="page-loader"></div>
         <header id="navigation">
-            <nav>
                 <ul>
                     <li><a href="/index.html">Home</a></li>
-                    <li><a href="/src/aboutMe.html" style="color: red">About Me</a></li>
+                    <li><a href="/src/aboutMe.html" id="current">About Me</a></li>
                     <li><a href="/src/myInterests.html">My Interests</a></li>
                     <li><a href="/src/timeline.html">Timeline</a></li>
+                    <li><a href="/src/extras.html">Extras</a></li>
                     <li><a href="/src/contactMe.html">Contact Me</a></li>
+                    <button id="nightButton"><img id="nightButtonImage" src="https://cdn-icons-png.flaticon.com/512/6714/6714978.png" alt=""></button>
                 </ul>
-            </nav>
         </header>
         <h1 id="title">About Me</h1>
         <p>I'm Cyrus and I started coding 2 years ago! I have dabbled in many languages and engines such as C# when making games in Unity, and when I first started, I was coding in scratch. Nice to meet you, hope you like my website!</p>

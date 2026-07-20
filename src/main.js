@@ -12,15 +12,23 @@ const randomMessages = [
 ] // it was fun making these random text blurbs 🎉
 let randomInt = Math.floor(Math.random() * randomMessages.length);
 document.addEventListener("DOMContentLoaded", () => {
+    let nightButton = document.getElementById("nightButton");
+    nightButton.addEventListener("click", () => {darkModeEnable()});    
     document.querySelector(".page-loader").id = "loaderHidden";
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark");
+        document.getElementById("nightButtonImage").src = "https://www.svgrepo.com/show/432507/light-mode.svg";
+    }
 })
 while(randomInt == lastIndex){ // checks if it's the same message last time the page was loaded
     randomInt = Math.floor(Math.random() * randomMessages.length);
 }
-let target = document.getElementById("randomText");
-sessionStorage.setItem("lastSessionIndex", randomInt);
-target.innerText = randomMessages[randomInt];
 
+let target = document.getElementById("randomText");
+if(target){
+    sessionStorage.setItem("lastSessionIndex", randomInt);
+    target.innerText = randomMessages[randomInt];
+}
 window.addEventListener("click", (e) => {
     const particleCount = 10;
     const posX = e.clientX;
@@ -61,4 +69,16 @@ const createParticle = function(x, y){
         }
     }
     requestAnimationFrame(updateMovement);
+}
+function darkModeEnable(){
+    document.body.classList.toggle("dark");
+    let isDark = document.body.classList.contains("dark");
+    let nightButton = document.querySelector("#nightButtonImage");
+    if(isDark) {
+        nightButton.src = "https://www.svgrepo.com/show/432507/light-mode.svg";
+        localStorage.setItem("theme", "dark");
+    } else {
+        nightButton.src = "https://cdn-icons-png.flaticon.com/512/6714/6714978.png";
+        localStorage.setItem("theme", "light");
+    }
 }

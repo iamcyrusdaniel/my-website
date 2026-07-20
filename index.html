@@ -3,14 +3,14 @@
     <head>
         <meta charset="UTF-8" />
         <title>My Website</title>
-            <style>
+        <style>
             .page-loader {
                 position: absolute;
                 top: 0;
                 left: 0;
                 width: 100vw;
                 height: 100vh;
-                background: #f4f7fb;
+                background: #001432;
                 z-index: 9999;
                 transition: opacity 0.5s ease, visibility 0.5s ease;
             }
@@ -26,11 +26,13 @@
         <header id="navigation">
             <nav>
                 <ul>
-                    <li><a href="/index.html" style="color: red">Home</a></li>
+                    <li><a href="/index.html" id="current">Home</a></li>
                     <li><a href="/src/aboutMe.html">About Me</a></li>
                     <li><a href="/src/myInterests.html">My Interests</a></li>
                     <li><a href="/src/timeline.html">Timeline</a></li>
+                    <li><a href="/src/extras.html">Extras</a></li>
                     <li><a href="/src/contactMe.html">Contact Me</a></li>
+                    <button id="nightButton"><img id="nightButtonImage" src="https://cdn-icons-png.flaticon.com/512/6714/6714978.png" alt=""></button>
                 </ul>
             </nav>
         </header>
