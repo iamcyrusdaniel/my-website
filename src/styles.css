@@ -75,22 +75,58 @@ li {
     list-style: none;
 }
 a {
-    margin-left: 50px;
-    margin-right: 50px;
     border-radius: 10px;
     text-decoration: none;
     position: sticky;
     color: #773399;
 }
+
 #current {
     color: red;
 }
+
 ul {
+    background-color: #d7e6fa;
+    align-items: center; 
+    display: flex;
+    justify-content: center;
+}
+
+ul > div {
+    width: 100vw;
+    padding: 20px;
+    max-width: 1000px;
     display: flex;
     justify-content: space-evenly;
     padding: 20px;
-    background-color: #d7e6fa;
     align-items: center;
+    color: black;
+}
+
+#textBackgroundBlur {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(171, 205, 255, 0.30);
+    backdrop-filter: blur(100px);
+    border-radius: 20px;
+    z-index: 1;
+}
+
+body.dark #textBackgroundBlur {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 20, 50, 0.20);
+    backdrop-filter: blur(100px);
+    border-radius: 20px;
+    z-index: 1;
 }
 
 body.dark ul {
@@ -149,6 +185,10 @@ body.dark ul img {
     cursor: pointer;
 }
 
+.backgroundBlurHidden {
+    background: none !important;
+}
+
 .hidden {
     display: none;
 }
@@ -161,6 +201,41 @@ body.dark ul img {
     position: fixed;
     opacity: 0.8;
     filter: blur(150px);
+}
+#extrasButton {
+    height: 100px;
+    width: 200px;
+    font-size: 30px;
+    position: fixed;
+    color: #773399;
+    background-color: #d7e6fa;
+    border: 10px solid #b7c4d4;
+    border-radius: 10px;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+}
+body.dark #extrasButton {
+    height: 100px;
+    width: 200px;
+    font-size: 30px;
+    position: fixed;
+    color: #88CC66;
+    background-color: #003380;
+    border: 10px solid #002a68;
+    border-radius: 10px;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+}
+
+button:hover {
+    filter: brightness(0.8);
+    cursor: pointer;
+}
+
+a:hover {
+    filter: brightness(0.8);
 }
 
 #extras {

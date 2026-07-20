@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         extrasButton.addEventListener("click", () => {
             extrasButton.remove();
             document.getElementById("extras").classList.remove("hidden");
+            document.getElementByClass("textBackgroundBlur").id = "";
         })
     }
 })
