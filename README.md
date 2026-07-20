@@ -11,6 +11,7 @@ Welcome to my portfolio website! This project is a personal portfolio website th
 - 🎉 Click particle effects created with JavaScript
 - 📅 Interactive timeline with hover animations
 - 🎨 Custom styling using CSS animations and transitions
+- 🔥 Cool lava lamp-like background using blurs
 
 ## Built With
 
