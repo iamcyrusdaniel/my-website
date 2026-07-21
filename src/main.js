@@ -1,5 +1,8 @@
 import './styles.css';
 let lastIndex = sessionStorage.getItem("lastSessionIndex");
+let string = "";
+let letters = []; 
+let i = 0;
 const randomMessages = [
     "Have a great day!",
     "Click refresh :P",
@@ -12,9 +15,20 @@ const randomMessages = [
 ] // it was fun making these random text blurbs 🎉
 let randomInt = Math.floor(Math.random() * randomMessages.length);
 document.addEventListener("DOMContentLoaded", () => {
+    target = document.getElementById("title");
+    string = target.innerText;
+    letters = string.split("");
+    target.innerText = "";
+    typingAnimation(target);
     let nightButton = document.getElementById("nightButton");
     let extrasButton = document.getElementById("extrasButton");
-    nightButton.addEventListener("click", () => {darkModeEnable()});    
+    nightButton.addEventListener("click", () => {
+        darkModeEnable()
+        let button = document.getElementById("nightButtonImage");
+        button.classList.remove("spin");
+        void button.offsetWidth;
+        button.classList.add("spin");
+    });    
     document.querySelector(".page-loader").id = "loaderHidden";
     if (localStorage.getItem("theme") === "dark") {
         document.body.classList.add("dark");
@@ -24,10 +38,16 @@ document.addEventListener("DOMContentLoaded", () => {
         extrasButton.addEventListener("click", () => {
             extrasButton.remove();
             document.getElementById("extras").classList.remove("hidden");
-            document.getElementByClass("textBackgroundBlur").id = "";
         })
     }
 })
+let typingAnimation = function(target){
+    if(i < letters.length){
+        target.innerHTML += letters[i];
+        i++;
+        setTimeout(() => typingAnimation(target), 75);
+    }
+}
 while(randomInt == lastIndex){ // checks if it's the same message last time the page was loaded
     randomInt = Math.floor(Math.random() * randomMessages.length);
 }
