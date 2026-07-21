@@ -3,8 +3,9 @@ let lastIndex = sessionStorage.getItem("lastSessionIndex");
 let string = "";
 let letters = []; 
 let i = 0;
+let validObjects = [];
 const randomMessages = [
-    "Have a great day!",
+    "Try dark mode",
     "Click refresh :P",
     "Javascript is cool 😎",
     "Secret message...",
@@ -29,17 +30,22 @@ document.addEventListener("DOMContentLoaded", () => {
         void button.offsetWidth;
         button.classList.add("spin");
     });    
-    document.querySelector(".page-loader").id = "loaderHidden";
     if (localStorage.getItem("theme") === "dark") {
         document.body.classList.add("dark");
         document.getElementById("nightButtonImage").src = "https://www.svgrepo.com/show/432507/light-mode.svg";
     }
+    document.querySelector(".page-loader").id = "loaderHidden";
     if(extrasButton){
         extrasButton.addEventListener("click", () => {
             extrasButton.remove();
             document.getElementById("extras").classList.remove("hidden");
         })
     }
+    setTimeout(() => {
+        document.body.classList.add("transitionColor");
+        document.getElementsByTagName("ul")[0].classList.add("transitionColor");
+        console.log("classes applied")
+    }, 1);
 })
 let typingAnimation = function(target){
     if(i < letters.length){

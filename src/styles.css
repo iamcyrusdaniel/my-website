@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+.transitionColor {
+    transition: background 0.5s ease, color 0.5s ease, background-color 0.5s ease;
+}
+
 body {
     background: #f4f7fb;
     color: #773399;
@@ -30,6 +34,7 @@ h1{
     background: none;
     border: none;
     cursor: pointer;
+    opacity: 0.6;
 }
 
 #nightButton img {
@@ -141,7 +146,8 @@ body.dark ul #current {
 }
 
 body.dark ul img {
-    filter: invert(0.75);
+    filter: invert(1);
+    opacity: 0.75;
 }
 
 #timelineLine {
@@ -266,7 +272,7 @@ button:hover, a:hover {
     filter: drop-shadow(0 0 10px #b77cff);
 }
 
-body.dark button:hover,body.dark a:hover {
+body.dark button:hover, body.dark a:hover {
     filter: drop-shadow(0 0 10px #d1eaff)
 }
 
