@@ -3,7 +3,6 @@ let lastIndex = sessionStorage.getItem("lastSessionIndex");
 let string = "";
 let letters = []; 
 let i = 0;
-let validObjects = [];
 const randomMessages = [
     "Try dark mode",
     "Click refresh :P",
@@ -16,7 +15,7 @@ const randomMessages = [
 ] // it was fun making these random text blurbs 🎉
 let randomInt = Math.floor(Math.random() * randomMessages.length);
 document.addEventListener("DOMContentLoaded", () => {
-    target = document.getElementById("title");
+    let target = document.getElementById("title");
     string = target.innerText;
     letters = string.split("");
     target.innerText = "";
@@ -46,6 +45,24 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementsByTagName("ul")[0].classList.add("transitionColor");
         console.log("classes applied")
     }, 1);
+    let timelineTextContainers = ["scratchButtonText", "codeButtonText", "unityButtonText", "stardanceButtonText"];
+    let timelineButtons = ["scratchButton", "codeButton", "unityButton", "stardanceButton"];
+    let timelineButtonTexts = [
+        "For about a year I did scratch block coding",
+        "I moved on to HTML, JavaScript, and CSS starting from the 2025 summer break",
+        "I picked up Unity and LeetCode starting from the New Year",
+        "Now I'm applying all of my knowledge here, on Stardance!"
+    ];
+    let previousTarget = "";
+    for(let i = 0; i < timelineButtons.length; i++){
+        let textTarget = document.getElementById(timelineTextContainers[i]);
+        let buttonTarget = document.getElementById(timelineButtons[i]);
+        buttonTarget.addEventListener("click", () => {
+            if(previousTarget) previousTarget.innerText = "";
+            textTarget.innerText = timelineButtonTexts[i];
+            previousTarget = textTarget;
+        });
+    }
 })
 let typingAnimation = function(target){
     if(i < letters.length){
