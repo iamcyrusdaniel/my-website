@@ -57,10 +57,11 @@ document.addEventListener("DOMContentLoaded", () => {
     for(let i = 0; i < timelineButtons.length; i++){
         let textTarget = document.getElementById(timelineTextContainers[i]);
         let buttonTarget = document.getElementById(timelineButtons[i]);
-        buttonTarget.addEventListener("click", () => {
-            if(previousTarget) previousTarget.innerText = "";
+        buttonTarget.addEventListener("mouseenter", () => {
             textTarget.innerText = timelineButtonTexts[i];
-            previousTarget = textTarget;
+        });
+        buttonTarget.addEventListener("mouseleave", () => {
+            textTarget.innerText = "";
         });
     }
 })
