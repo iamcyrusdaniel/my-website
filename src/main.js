@@ -42,7 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     setTimeout(() => {
         document.body.classList.add("transitionColor");
-        document.getElementsByTagName("ul")[0].classList.add("transitionColor");
+        let uls = document.getElementsByTagName("ul");
+        uls[0].classList.add("transitionColor");
+        uls[1].classList.add("transitionColor");
         console.log("classes applied")
     }, 1);
     let timelineTextContainers = ["scratchButtonText", "codeButtonText", "unityButtonText", "stardanceButtonText"];
@@ -53,18 +55,28 @@ document.addEventListener("DOMContentLoaded", () => {
         "I picked up Unity and LeetCode starting from the New Year",
         "Now I'm applying all of my knowledge here, on Stardance!"
     ];
-    let previousTarget = "";
     for(let i = 0; i < timelineButtons.length; i++){
         let textTarget = document.getElementById(timelineTextContainers[i]);
         let buttonTarget = document.getElementById(timelineButtons[i]);
-        buttonTarget.addEventListener("mouseenter", () => {
+        if(buttonTarget) buttonTarget.addEventListener("mouseenter", () => {
             textTarget.innerText = timelineButtonTexts[i];
         });
-        buttonTarget.addEventListener("mouseleave", () => {
+        if(buttonTarget) buttonTarget.addEventListener("mouseleave", () => {
             textTarget.innerText = "";
         });
     }
+    let hamburgerButton = document.getElementById("hamburgerButton");
+    let hamburgerMenu = document.getElementById("hamburgerMenu"); 
+    hamburgerButton.addEventListener("click", () => {
+        hamburgerMenu.classList.toggle("hidden");
+        console.log("this line isn't executing");
+    });
 })
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 630) {
+        hamburgerMenu.classList.add("hidden");
+    }
+});
 let typingAnimation = function(target){
     if(i < letters.length){
         target.innerHTML += letters[i];
