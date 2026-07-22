@@ -152,6 +152,7 @@ body.dark ul img {
 #hamburgerMenu {
     width: 100vw;
     height: auto;
+    gap: 10px;
     padding-top: 30px;
     padding-bottom: 30px;
     display: flex;
@@ -164,27 +165,6 @@ body.dark ul img {
     z-index: 1;
 }
 
-@media screen and (max-width: 630px){
-    ul > div > li > a {
-        visibility: hidden;
-        font-size: 14px;
-    }
-    #hamburgerButton {
-        display: block;
-    }
-    #timelineLine {
-        flex-direction: column;
-        width: 0;
-        height: 70vh;
-        border-radius: 100px;
-        margin: 150px auto 0;
-    }
-}
-@media (min-width: 631px) {
-    #hamburgerMenu {
-        display: none !important;
-    }
-}
 #timelineLine {
     margin-top: 150px;
     margin-left: 40px;
@@ -195,6 +175,36 @@ body.dark ul img {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+@media (max-width: 630px){
+    ul > div > li > a {
+        visibility: hidden;
+        font-size: 14px;
+    }
+    #hamburgerButton {
+        display: block;
+    }
+    #timelineLine {
+        margin-top: 10vh;
+        flex-direction: column;
+        position: relative;
+        width: 0px;
+        height: 60vh !important;
+        border-radius: 100px;
+        border: 3px solid #773399;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        left: 50vw;
+        transform: translate(-7.5vw);
+    }
+}
+@media (min-width: 631px) {
+    #hamburgerMenu {
+        display: none !important;
+    }
 }
 
 .timelineDot {
@@ -396,4 +406,10 @@ body.dark #extras #box3{
 #tamilNaduPicture {
     width: 50vw;
     height: auto;
+}
+
+footer {
+text-align: center;
+margin-top: 100px;
+opacity: 0.6;   
 }
