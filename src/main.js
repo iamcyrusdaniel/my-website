@@ -17,6 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
     timelineEventListener();
     extrasEventListener();
     typingAnimation();
-    randomText();
     pageLoader();
+    randomText();
 });
