@@ -114,19 +114,13 @@ ul {
     background-color: #d7e6fa;
     align-items: center; 
     display: flex;
-    justify-content: center;
-}
-
-ul > div {
     width: 100vw;
     max-width: 1000px;
     display: flex;
     justify-content: space-evenly;
     padding: 20px;
-    align-items: center;
     color: black;
 }
-
 body.dark ul {
     background-color: #002763;
 }
@@ -178,7 +172,7 @@ body.dark ul img {
 }
 
 @media (max-width: 630px){
-    ul > div > li > a {
+    ul > li > a {
         visibility: hidden;
         font-size: 14px;
     }

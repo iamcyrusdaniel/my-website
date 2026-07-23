@@ -2,14 +2,14 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>My Website</title>
+        <title>My Interests</title>
         <style>
             .page-loader {
-                position: fixed;
+                position: absolute;
                 top: 0;
                 left: 0;
-                width: 100%;
-                height: 100%;
+                width: 100vw;
+                height: 100vh;
                 background: #001432;
                 z-index: 9999;
                 transition: opacity 0.5s ease, visibility 0.5s ease;
@@ -21,16 +21,14 @@
             }
         </style>
     </head>
-    <body id="main">
+    <body>
         <div class="page-loader"></div>
         <header id="navigation">
             <div id="navbar"></div>
             <div id="hamburger"></div>
         </header>
-        <h1 id="title">My Website</h1>
-        <p>I'm Cyrus and I started coding 2 years ago! I have dabbled in many languages and engines such as C# when making games in Unity, and when I first started, I was coding in scratch. Nice to meet you, hope you like my website!</p>
-        <p>Please feel free to look around and explore every crevice of my portfolio website!</p>
-        <h6 id="randomText"></h6>
+        <h1 id="title">My Interests</h1>
+        <p>I'm interested in all sorts of things such as Coding, Cooking, and playing the guitar. </p>
         <script type="module" src="/src/main.js"></script>
     </body>
     <footer>
