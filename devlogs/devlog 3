@@ -1,0 +1,22 @@
+# Animations Update!
+I have added more animations as it makes the website more entertaining! All the changes are in the demo for those of you who want to see it in action :D
+
+## ⌨️ Typing Animation
+I added a script to make the title look as though it is being typed out!
+
+## 📏 Navigation Bar Size Limit
+Now the navbar doesn’t take up the entire screen width in the scenario the screen is big as it made it a little difficult to use
+
+## 🌌 Background Text Visibility Fix
+I had an issue with the background on the extras page blocking visibility, I’ve fixed this by adding a translucent background on the page and I’m quite proud of it!
+
+## ⭐ Button/Link Glow
+Awesome glow effect on links and buttons
+
+Timeline Transition
+Timeline dots appear smoothly after one another
+
+## Spinning Dark Mode Button
+By using JavaScript and CSS animations I was able to create a cool spin effect when clicking the dark mode button
+
+#### Thanks for reading my devlog, feedback is appreciated!

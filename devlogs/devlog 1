@@ -1,0 +1,35 @@
+# My Own Portfolio
+
+Welcome to my first devlog! This project is a personal portfolio website that I’m currently building to introduce myself and showcase my development skills. So far, I’ve implemented an animated timeline, JavaScript particle effects, page transitions, and other interactive features. I’ve had a lot of fun building it, and I really hope you enjoy checking out this project!
+
+## Features
+
+🏠 Multi-page website with navigation
+✨ Page loading transition
+🎲 Random welcome messages with repetition prevention using session storage
+🎉 Click particle effects created with JavaScript
+📅 Interactive timeline with hover animations
+🎨 Custom styling using CSS animations and transitions
+
+## Built with
+
+- HTML
+- CSS
+- JavaScript
+- Vite
+
+## What I Learned
+
+- Structuring a multi-page website
+- Using sessionStorage
+- Creating animations using requestAnimationFrame
+- Making loading screens to hide flashes of unstyled content
+
+## What’s Left?
+
+- Remove placeholder text from pages
+- Improve animations and transitions
+- Make the site more interactive
+- Make the portfolio more personal to me
+
+Hope you like it :D

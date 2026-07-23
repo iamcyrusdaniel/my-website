@@ -1,0 +1,6 @@
+# Devlog 2 | Dark Mode
+Hey everyone! This is my second devlog, and this time I’ve added my biggest feature, dark mode. It saves your preference of light/dark mode using localStorage so you don’t have to keep switching back to your preference every time you go to a different section. I’ve also added a lava lamp-like background to the new page “Extras”. If you haven’t read my first devlog, I’ve made a portfolio website with HTML, CSS, and JavaScript! It’s a website to showcase my skills and background.
+
+Other than that I’ve fixed the navbar not being flush with the corners of the page. Overall I’m content with my progress!
+
+Please give me any suggestions I’d greatly appreciate it ❤️
