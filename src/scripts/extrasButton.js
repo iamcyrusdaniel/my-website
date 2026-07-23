@@ -6,4 +6,4 @@ export function extrasEventListener(){
             document.getElementById("extras").classList.remove("hidden");
         })
     }
-}
+};

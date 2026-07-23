@@ -24,4 +24,4 @@ function darkModeEnable(){
         nightButton.src = "https://cdn-icons-png.flaticon.com/512/6714/6714978.png";
         localStorage.setItem("theme", "light");
     }
-}
+};

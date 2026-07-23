@@ -1,4 +1,5 @@
 import './styles.css';
+import { htmlInjector } from './scripts/htmlInjector';
 import { hamburgerEventListener } from './scripts/hamburgerMenu';
 import { confettiEventListener } from './scripts/confetti';
 import { darkModeEventListener } from './scripts/darkMode';
@@ -9,6 +10,7 @@ import { randomText } from './scripts/randomText';
 import { pageLoader } from './scripts/pageLoader';
 
 document.addEventListener("DOMContentLoaded", () => {
+    htmlInjector();
     hamburgerEventListener();
     confettiEventListener();
     darkModeEventListener();
@@ -17,4 +19,4 @@ document.addEventListener("DOMContentLoaded", () => {
     typingAnimation();
     randomText();
     pageLoader();
-})
+});

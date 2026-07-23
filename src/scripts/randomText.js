@@ -21,4 +21,4 @@ export function randomText(){
         sessionStorage.setItem("lastSessionIndex", randomInt);
         target.innerText = randomMessages[randomInt];
     }
-}
+};

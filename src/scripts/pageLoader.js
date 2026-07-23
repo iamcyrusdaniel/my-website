@@ -6,4 +6,4 @@ export function pageLoader(){
         uls[0].classList.add("transitionColor");
         uls[1].classList.add("transitionColor");
     }, 1);
-}
+};

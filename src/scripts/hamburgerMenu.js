@@ -7,4 +7,4 @@ export function hamburgerEventListener(){
             hamburgerMenu.classList.add("hidden");
         }
     });
-}
+};
