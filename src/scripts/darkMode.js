@@ -1,4 +1,4 @@
-function darkModeEventListener(){
+export function darkModeEventListener(){
     let nightButton = document.getElementById("nightButton");
     nightButton.addEventListener("click", () => {
         darkModeEnable()

@@ -1,4 +1,4 @@
-function randomText(){
+export function randomText(){
     let lastIndex = sessionStorage.getItem("lastSessionIndex");
     const randomMessages = [
         "Try dark mode",

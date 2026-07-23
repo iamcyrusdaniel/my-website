@@ -1,4 +1,4 @@
-function timelineEventListener() {
+export function timelineEventListener() {
     let timelineTextContainers = ["scratchButtonText", "codeButtonText", "unityButtonText", "stardanceButtonText"];
     let timelineButtons = ["scratchButton", "codeButton", "unityButton", "stardanceButton"];
     let timelineButtonTexts = [

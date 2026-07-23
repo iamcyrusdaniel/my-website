@@ -1,4 +1,4 @@
-function typingAnimation(){
+export function typingAnimation(){
     let letters = []; 
     let string = "";
     let i = 0;
