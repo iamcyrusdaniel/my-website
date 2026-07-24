@@ -3,7 +3,6 @@ export function darkModeEventListener(){
         document.body.classList.add("dark");
         document.getElementById("nightButtonImage").src = "https://www.svgrepo.com/show/432507/light-mode.svg";
     }
-
     let nightButton = document.getElementById("nightButton");
     nightButton.addEventListener("click", () => {
         darkModeEnable()

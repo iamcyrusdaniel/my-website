@@ -1,0 +1,41 @@
+# Devlog 4 | Mobile Support
+
+Welcome to my fifth devlog! I've now fixed many of the major bugs that were present in my code and I've also started to make the site more pretty :D
+
+----
+
+# 🛠️ Features
+Who doesn't like more features?
+
+## 📊 Stats
+Now you can finally know how many times you toggled dark mode, or how much time you've spent on my website!
+
+----
+
+# ✨ Visuals
+Here are the new visual updates!
+
+## 🌓 Dark Mode Transition
+Gradual color transitions make switching between dark mode and light mode easier on the eyes
+
+## 🔽 Simplistic Footer
+I also added a footer that says **Made by Cyrus • 2026**, it makes the site feel more professional
+
+----
+
+# 🤔 What's Left?
+
+Surprisingly I'm almost done...
+
+## 🐛 Fix all the bugs
+After modularizing the code, a lot of new bugs have been introduced that I need to fix
+
+## 🎉 Make the page look more entertaining
+I've mostly worked on JavaScript animations and mobile support, I now need to make the styling itself look better
+
+## Add my own personal stuff!
+I still haven't put my own details on the pages (there's still placeholders)
+
+----
+
+Thanks for reading my devlog! The first image is the hamburger menu, and the second image shows the new modularized file system.

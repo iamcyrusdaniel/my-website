@@ -1,0 +1,72 @@
+.box {
+    position: fixed;
+    opacity: 0.8;
+    filter: blur(150px);
+}
+#extrasButton {
+    height: 100px;
+    width: 200px;
+    font-size: 30px;
+    color: #773399;
+    background-color: #d7e6fa;
+    border: 10px solid #b7c4d4;
+    border-radius: 10px;
+    top: 50vh;
+}
+body.dark #extrasButton {
+    color: #88CC66;
+    background-color: #003380;
+    border: 10px solid #002a68;
+}
+.backgroundBlurHidden {
+    background: none !important;
+}
+.backgroundGlow {
+    z-index: -1;
+}
+#textBackgroundBlur {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(171, 205, 255, 0.30);
+    backdrop-filter: blur(100px);
+    border-radius: 20px;
+    z-index: 1;
+}
+body.dark #textBackgroundBlur {
+    background-color: rgba(0, 20, 50, 0.20);
+}
+#extrasBackground {
+    position: fixed;
+    pointer-events: none;
+}
+#extrasBackground #box1{
+    height: 800px;
+    width: 800px;
+    top: 5%;
+    left: 5%;
+    background-color: #4dc7ff;
+    transition: scale 0.8s ease-in-out;
+}
+#extrasBackground #box2{
+    height: 700px;
+    width: 1200px;
+    top: 50%;
+    right: -2%;
+    background-color: #4ce027;
+    transition: scale 1s ease-in-out;
+}
+#extrasBackground #box3{
+    height: 700px;
+    width: 700px;
+    bottom: 30%;
+    left: 60%;
+    background-color: #ff2525;
+    transition: scale 0.6s ease-in-out;
+}
+body.dark #extrasBackground #box1{ background-color: #46b2e4 }
+body.dark #extrasBackground #box2{ background-color: #41be21 }
+body.dark #extrasBackground #box3{ background-color: #d82020 }
