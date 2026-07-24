@@ -3,11 +3,15 @@ export function confettiEventListener() {
         const particleCount = 10;
         const posX = e.clientX;
         const posY = e.clientY;
+        let clickCount = parseInt(localStorage.getItem("clickCount")) || 0;
+        localStorage.setItem("clickCount", clickCount + 1);
         for(let i = 0; i < particleCount; i++) {
             createParticle(posX, posY);
         }
     })
     const createParticle = function(x, y){
+        let count = parseInt(localStorage.getItem("confettiCount")) || 0;
+        localStorage.setItem("confettiCount", count + 1);
         const angle = Math.random() * Math.PI * 2; // random angle in radians required for angles to work since that's how it works under the hood
         const speed = 3 + Math.random() * 3;
         let particle = document.createElement("div");

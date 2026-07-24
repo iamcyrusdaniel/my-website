@@ -1,4 +1,5 @@
 import './styles.css';
+import { saveTime } from './scripts/saveTime';
 import { htmlInjector } from './scripts/htmlInjector';
 import { hamburgerEventListener } from './scripts/hamburgerMenu';
 import { confettiEventListener } from './scripts/confetti';
@@ -11,6 +12,7 @@ import { pageLoader } from './scripts/pageLoader';
 
 document.addEventListener("DOMContentLoaded", () => {
     htmlInjector();
+    saveTime();
     hamburgerEventListener();
     confettiEventListener();
     darkModeEventListener();

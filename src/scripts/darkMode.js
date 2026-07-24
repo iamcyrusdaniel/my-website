@@ -1,4 +1,9 @@
 export function darkModeEventListener(){
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark");
+        document.getElementById("nightButtonImage").src = "https://www.svgrepo.com/show/432507/light-mode.svg";
+    }
+
     let nightButton = document.getElementById("nightButton");
     nightButton.addEventListener("click", () => {
         darkModeEnable()
@@ -6,14 +11,13 @@ export function darkModeEventListener(){
         button.classList.remove("spin");
         void button.offsetWidth;
         button.classList.add("spin");
-        if (localStorage.getItem("theme") === "dark") {
-            document.body.classList.add("dark");
-            document.getElementById("nightButtonImage").src = "https://www.svgrepo.com/show/432507/light-mode.svg";
-        }
     });
 }
 
 function darkModeEnable(){
+    let count = parseInt(localStorage.getItem("darkModeToggleCount")) || 0;
+    localStorage.setItem("darkModeToggleCount", count + 1);
+    
     document.body.classList.toggle("dark");
     let isDark = document.body.classList.contains("dark");
     let nightButton = document.querySelector("#nightButtonImage");
