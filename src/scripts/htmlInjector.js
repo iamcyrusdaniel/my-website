@@ -11,4 +11,5 @@ export function htmlInjector() {
             if(link.pathname === currentPage) link.id = "current";
         });
     }
+    highlightCurrentPage();
 };

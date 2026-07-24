@@ -1,42 +1,65 @@
 # Devlog 4 | Mobile Support
 
-Welcome to my fourth devlog on my portfolio! I'm currently working on mobile support and I've made multiple changes to how the page resizes
+
+Welcome to my fourth devlog on my portfolio! This update has been focused on mobile support, and I've also made several changes to how the site adapts to different screen sizes
 
 ----
 
 # 🛠️ Features
-
 All the cool new features!
 
 ## 📖 Timeline Text
-
-At first I wanted to make it so that when you click on the timeline, it'll show each section, but I opted to show the section the user is currently hovering over, it makes the site feel more interactive!
+At first I wanted to make it so that when you click on the timeline, it would show each section, but I opted to show the section the user is currently hovering over. It makes the site feel more interactive!
 
 ## 🕸️ Restructured File System
+Before, I had literally just one JavaScript file and the same code copy pasted across every page, now I've modularized it into multiple files (still many bugs to fix though)
 
 ----
 
 # ✨ Visuals
-
-Here are the new visual updates excluding mobile resizing 
+Here are the new visual updates excluding mobile resizing
 
 ## 🌓 Dark Mode Transition
-
 Gradual color transitions make switching between dark mode and light mode easier on the eyes
 
 ## 🔽 Simplistic Footer
-
 I also added a footer that says **Made by Cyrus • 2026**, it makes the site feel more professional
 
 ----
 
 # 📱 Mobile Resizing
-
 Now my app is compatible with mobile!
 
-### 😋 Hamburger Menu
-When the width of the screen is sufficiently low, the menu collapses into a hamburger (that 3 lines icon), and when clicked on, it show a dropdown menu of the links
-
+## 😋 Hamburger Menu
+When the screen width is low, the menu collapses into a hamburger (the 3-line icon), and when clicked on, it shows a dropdown menu of the links
 
 ## 🟡 Timeline Text
-I implemented a mobile friendly update to my timeline that transforms the page into a vertical layout when also sufficiently shrinked
+I implemented a mobile-friendly update to my timeline that transforms the page into a vertical layout when the page is shrunk
+
+----
+
+# What I've Learned
+
+- 🔎 Media queries for adjustments based on screen size
+- 🧱 Modularizing code so that maintenance and readability are improved
+- 🍔 Awesome hamburger menu
+- 💪 Using CSS flex for more complex use cases than centering
+
+----
+
+# 🤔 What's Left?
+
+Surprisingly I'm almost done...
+
+## 🐛 Fix all the bugs
+After modularizing the code, a lot of new bugs have been introduced that I need to fix
+
+## 🎉 Make the page look more entertaining
+I've mostly worked on JavaScript animations and mobile support, I now need to make the styling itself look better
+
+## Add my own personal stuff!
+I still haven't put my own details on the pages (there's still placeholders)
+
+----
+
+Thanks for reading my devlog! The first image is the hamburger menu, and the second image shows the new modularized file system.

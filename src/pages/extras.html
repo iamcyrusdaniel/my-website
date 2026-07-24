@@ -3,36 +3,19 @@
     <head>
         <meta charset="UTF-8" />
         <title>Extras</title>
-        <style>
-            .page-loader {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100vw;
-                height: 100vh;
-                background: #001432;
-                z-index: 9999;
-                transition: opacity 0.5s ease, visibility 0.5s ease;
-            }
-            #loaderHidden {
-                opacity: 0;
-                visibility: hidden;
-                pointer-events: none;
-            }
-        </style>
     </head>
     <body>
         <div class="page-loader"></div>
         <header id="navigation">
-            <ul id="navbar"></ul>
-            <ul class="hidden" id="hamburger"></ul>
+            <ul class="navbar"></ul>
+            <ul class="hamburgerMenu hidden"></ul>
         </header>
         <div class="backgroundBlurHidden" id="textBackgroundBlur">
             <h1 id="title">Extras</h1>
             <p>Want to see some cool extra stuff? Shh don't tell anyone!</p>
         </div>
         <button id="extrasButton">Yes Please!</button>
-        <div id="extras" class="hidden backgroundGlow">
+        <div id="extrasBackground" class="hidden backgroundGlow">
             <div class="growingBox" id="box1"></div>
             <div class="growingBox" id="box2"></div>
             <div class="growingBox" id="box3"></div>

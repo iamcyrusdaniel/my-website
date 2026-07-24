@@ -98,16 +98,7 @@ a {
 }
 
 body.dark #textBackgroundBlur {
-    width: 100%;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     background-color: rgba(0, 20, 50, 0.20);
-    backdrop-filter: blur(100px);
-    border-radius: 20px;
-    z-index: 1;
 }
 
 ul {
@@ -115,17 +106,25 @@ ul {
     align-items: center; 
     display: flex;
     width: 100vw;
-    max-width: 1000px;
+    padding: 20px 0;
     display: flex;
     justify-content: space-evenly;
-    padding: 20px;
-    color: black;
 }
-body.dark ul {
+
+ul div {
+    width: 100%;
+    background-color: #d7e6fa;
+    align-items: center; 
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px;
+}
+
+body.dark ul, body.dark ul div {
     background-color: #002763;
 }
 
-body.dark ul a {
+body.dark ul div a {
     color: #88CC66;
     white-space: nowrap;
 }
@@ -172,7 +171,7 @@ body.dark ul img {
 }
 
 @media (max-width: 630px){
-    .navbar > li > a {
+    .navbar > div > li > a {
         visibility: hidden;
         font-size: 14px;
     }
